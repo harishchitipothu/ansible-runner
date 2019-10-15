@@ -9,3 +9,5 @@ RUN yum install -y sudo && yum clean all
 RUN adduser -m thor && echo 'thor:mjolnir123' | chpasswd && usermod -aG wheel thor
 
 RUN echo "thor    ALL=(ALL)   NOPASSWD:ALL" >> /etc/sudoers
+
+USER thor
